@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+      <h3>Data pengurus osismpk</h3>
+
+      {% for nama in name %}
+        <li>{{ nama }}</li>
+      {% endfor %}
+      
+      {{ class }}
+
+{% endblock %}
