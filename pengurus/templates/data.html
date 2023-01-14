@@ -2,13 +2,33 @@
 
 {% block content %}
 
-    
-      <h3>Data pengurus osismpk</h3>
-
-      {% for nama in name %}
-        <li>{{ nama }}</li>
-      {% endfor %}
-      
-      {{ class }}
-
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>NIS</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Keterangan</th>
+            <th>Jabatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in dataa %}
+          <tr>
+            <td><a href="{% url 'ubah_data' data.id %}">{{ data.nis }}</a></td>
+            <td>{{ data.nama }}</td>
+            <td>{{ data.kelas }}</td>
+            <td>{{ data.keterangan_id }}</td>
+            <td>{{ data.jabatan }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+     
 {% endblock %}
