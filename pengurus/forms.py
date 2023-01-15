@@ -10,7 +10,7 @@ class FormData(ModelForm):
         widgets = {
             'nis' : forms.TextInput({'class':'form-control'}),
             'nama' : forms.TextInput({'class':'form-control'}),
-            'kelas' : forms.TextInput({'class':'form-control'}),
+            'kelas_id' : forms.Select({'class':'form-control'}),
             'keterangan_id' : forms.Select({'class':'form-control'}),
             'jabatan' : forms.TextInput({'class':'form-control'}),
         }
