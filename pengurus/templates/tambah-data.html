@@ -8,7 +8,7 @@
                 {% if pesan %}
                 <div class="alert alert-success">{{ pesan }}</div>
                 {% endif %}
-                <form action="/tambah-data/" method="post">
+                <form action="/tambah-data/" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
 
                     {{ form.as_p }}
